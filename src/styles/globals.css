@@ -1,0 +1,444 @@
+/* styles/globals.css
+  Diseñado para TailwindCSS 4.1+ (sin tailwind.config.js)
+*/
+
+/* ---------------------------
+  Tailwind entrypoints
+   --------------------------- */
+@import "tailwindcss";
+
+/* ---------------------------
+  SF PRO: @font-face (WOFF2 recomendados)
+  Coloca los archivos en: public/fonts/
+  Nombres sugeridos (puedes ajustar rutas):
+    - SF-Pro-Display-Regular.woff2
+    - SF-Pro-Display-Medium.woff2
+    - SF-Pro-Display-Bold.woff2
+    - SF-Pro-Text-Regular.woff2
+    - SF-Pro-Text-Medium.woff2
+    - SF-Pro-Text-Bold.woff2
+   --------------------------- */
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/assets/fonts/SF-Pro-Display-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/assets/fonts/SF-Pro-Display-Medium.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/assets/fonts/SF-Pro-Display-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/assets/fonts/SF-Pro-Text-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/assets/fonts/SF-Pro-Text-Medium.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/assets/fonts/SF-Pro-Text-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================================
+  ROOT VARIABLES & THEME CONFIGURATION (TOKENS)
+============================================================================ */
+
+:root {
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@theme inline {
+  /* Base Colors */
+  --background: #ffffff;
+  --foreground: #1d1d1f;
+  --background-nav: #f5f5f7;
+  --shadow-color: oklch(0.3 0 0 / 0.25);
+
+  /* Layout */
+  --container-padding: 1.5rem;
+  --container-max-width: 100%;
+
+  /* Pastel Palette (referente) */
+  --color-pastel-yellow: #f1f38d;
+  --color-pastel-green: #8df3c2;
+  --color-pastel-violet: #c695f4;
+  --color-pastel-rose: #f38dbe;
+  --color-pastel-orange: #f4c695;
+  --color-pastel-orange-300: #ffae62;
+  --color-disabled: #676773;
+
+  --color-pastel-lightblue-300: #63DFF8;
+  --color-fluor-yellow-300: #DFF863;
+  --color-pastel-rose-300: #ef6bab;
+  --color-pastel-violet-300: #b06bef;
+  --color-pastel-violet-400: #9942eb;
+  --color-pastel-red-400: #F65737;
+  --color-pastel-green-500: #18e783;
+  --color-pastel-yellow-300: #edef6b;
+  --color-pastel-yellow-700: #919410;
+  --color-teal-new-400: #58c1c2;
+  --color-yellow-new-400: #f5c242;
+
+  /* Apple-green scale */
+  --color-green-apple-100: #E3F6C0;
+  --color-green-apple-300: #c1ec76;
+  --color-green-apple-400: #ACE647;
+  --color-green-apple-700: #629014;
+
+  /* Lira / Violet scale */
+  --color-pastel-lira-100: #E8C4F3;
+  --color-pastel-lira-200: #D797EA;
+  --color-pastel-lira-300: #CA78E3;
+  --color-pastel-lira-400: #BB51DB;
+  --color-pastel-lira-500: #AC2BD4;
+  --color-pastel-lira-700: #6E1C87;
+
+  /* Pastel Yellow scale (detailed) */
+  --color-pastel-yellow-50: #fcfde8;
+  --color-pastel-yellow-100: #f7f8be;
+  --color-pastel-yellow-200: #f1f38d;
+  --color-pastel-yellow-300: #edef6b;
+  --color-pastel-yellow-400: #e8eb42;
+  --color-pastel-yellow-500: #e3e718;
+  --color-pastel-yellow-600: #babd14;
+  --color-pastel-yellow-700: #919410;
+  --color-pastel-yellow-800: #696a0b;
+  --color-pastel-yellow-900: #404107;
+  --color-pastel-yellow-950: #171702;
+
+  /* Pastel violet scale */
+  --color-pastel-violet-50: #f3e8fd;
+  --color-pastel-violet-100: #dcbef8;
+  --color-pastel-violet-200: #c695f4;
+  --color-pastel-violet-300: #b06bef;
+  --color-pastel-violet-400: #9942eb;
+  --color-pastel-violet-500: #8318e7;
+  --color-pastel-violet-600: #6b14bd;
+  --color-pastel-violet-700: #541094;
+  --color-pastel-violet-800: #3c0b6a;
+  --color-pastel-violet-900: #250741;
+  --color-pastel-violet-950: #0d0217;
+
+  /* Sky pastel */
+  --color-pastel-sky-50: #E7FBFD;
+  --color-pastel-sky-100: #BCF3FA;
+  --color-pastel-sky-200: #91EBF7;
+  --color-pastel-sky-300: #7AE7F6;
+  --color-pastel-sky-400: #3BDCF1;
+  --color-pastel-sky-500: #11D5EE;
+
+  /* Pastel red scale */
+  --color-pastel-red-50: #FEEBE7;
+  --color-pastel-red-100: #FCC6BB;
+  --color-pastel-red-200: #FAA18F;
+  --color-pastel-red-300: #F87C63;
+  --color-pastel-red-400: #F65737;
+  --color-pastel-red-500: #F4320B;
+
+  /* Rose scale */
+  --color-pastel-rose-50: #fde8f2;
+  --color-pastel-rose-100: #f8beda;
+  --color-pastel-rose-200: #f38dbe;
+  --color-pastel-rose-300: #ef6bab;
+  --color-pastel-rose-400: #eb4294;
+  --color-pastel-rose-500: #e7187c;
+  --color-pastel-rose-600: #bd1466;
+
+  /* Shadows */
+  --shadow-hover: 0 6px 8px var(--shadow-color);
+  --shadow-active: 0 2px 4px var(--shadow-color);
+
+  /* Typography tokens (base) */
+  --font-sf-pro-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sf-pro-text: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --text-title-large: 32px;
+  --leading-title-large: 39px;
+  --weight-title-large: 700;
+
+  --text-title1: 26px;
+  --leading-title1: 32px;
+  --weight-title1: 700;
+
+  --text-title2: 20px;
+  --leading-title2: 25px;
+  --weight-title2: 600;
+
+  --text-headline: 21px;
+  --leading-headline: 23px;
+  --weight-headline: 600;
+
+  --text-body: 16px;
+  --leading-body: 22px;
+  --weight-body: 400;
+
+  --text-footnote: 12px;
+  --leading-footnote: 13px;
+  --weight-footnote: 400;
+}
+
+/* ============================================================================
+  RESPONSIVE TYPOGRAPHY (same values as your file, updated in media queries)
+============================================================================ */
+
+/* iOS Large (Tablet) - 700px to 1024px */
+@media (min-width: 700px) and (max-width: 1024px) {
+  :root {
+    --text-title-large: 34px;
+    --leading-title-large: 41px;
+
+    --text-title1: 28px;
+    --leading-title1: 34px;
+
+    --text-title2: 22px;
+    --leading-title2: 28px;
+
+    --text-headline: 21px;
+    --leading-headline: 23px;
+
+    --text-body: 17px;
+    --leading-body: 24px;
+
+    --text-footnote: 13px;
+    --leading-footnote: 18px;
+
+    --container-padding: 3rem;
+  }
+}
+
+/* macOS Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  :root {
+    --text-title-large: 48px;
+    --leading-title-large: 52px;
+
+    --text-title1: 32px;
+    --leading-title1: 36px;
+
+    --text-title2: 28px;
+    --leading-title2: 32px;
+
+    --text-headline: 21px;
+    --leading-headline: 23px;
+
+    --text-body: 18px;
+    --leading-body: 26px;
+
+    --text-footnote: 14px;
+    --leading-footnote: 20px;
+
+    --container-padding: 0rem;
+    --container-max-width: 980px;
+  }
+}
+
+/* Dark Mode adjustments (prefers-color-scheme) */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #f5f5f7;
+    --shadow-color: oklch(0.85 0 0 / 0.25);
+    --background-nav: #1d1d1f;
+  }
+} */
+
+/* ============================================================================
+  TYPOGRAPHY UTILITIES
+============================================================================ */
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sf-pro-text); /* base body uses SF Pro Text */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: "liga" 1;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-sf-pro-display); /* headings use SF Pro Display */
+    margin: 0;
+  }
+
+  strong { font-weight: 700; }
+}
+
+/* Typography utility classes (atomic tokens) */
+@layer utilities {
+  .text-title-large {
+    font-size: var(--text-title-large);
+    line-height: var(--leading-title-large);
+    font-weight: var(--weight-title-large);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  .text-title {
+    font-size: var(--text-title1);
+    line-height: var(--leading-title1);
+    font-weight: var(--weight-title1);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  .text-subTitle {
+    font-size: var(--text-title2);
+    line-height: var(--leading-title2);
+    font-weight: var(--weight-title2);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  .text-headline {
+    font-size: var(--text-headline);
+    line-height: var(--leading-headline);
+    font-weight: var(--weight-headline);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  .text-body {
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    font-weight: var(--weight-body);
+    font-family: var(--font-sf-pro-text);
+  }
+
+  .text-footnote {
+    font-size: var(--text-footnote);
+    line-height: var(--leading-footnote);
+    font-weight: var(--weight-footnote);
+    font-family: var(--font-sf-pro-text);
+  }
+
+  .text-strong {
+    font-weight: 700;
+  }
+}
+
+/* ============================================================================
+  COMPONENTS (atoms / molecules / organisms)
+============================================================================ */
+
+@layer components {
+  /* Container */
+  .container {
+    @apply p-(--container-padding) w-full;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Header / Navbar */
+  .header {
+    @apply sticky top-0 z-50 w-full;
+    background: var(--background-nav);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 3.75rem; /* h-15 equivalent */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  }
+
+  .navbar-brand {
+    font-family: var(--font-sf-pro-display);
+    font-weight: 700;
+    color: var(--foreground);
+    font-size: 1.125rem; /* ~18px */
+  }
+
+  .navbar-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* Button atom (base) */
+  .btn {
+    @apply inline-flex items-center justify-center px-3 md:px-4 py-2 md:py-2 rounded-xl transition-transform duration-150 ease-in-out cursor-pointer select-none hover:ring-2 ring-offset-2 ring-offset-white text-body active:shadow-active active:translate-y-0.5;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* Search field molecule */
+  .search-field {
+    @apply flex items-center gap-2 border rounded-[10px] px-3 py-2 bg-white;
+    border-color: var(--color-pastel-yellow-50);
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border rounded-md;
+    border-color: var(--color-pastel-yellow-50);
+    font-family: var(--font-sf-pro-text);
+  }
+
+  /* Underline hover utilities (from original) */
+  .u-underline-hover,
+  .u-underline-hover-current {
+    position: relative;
+    display: inline-block;
+  }
+
+  .u-underline-hover::after,
+  .u-underline-hover-current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 100ms ease-out;
+  }
+
+  .u-underline-hover::after {
+    background-color: var(--color-pastel-violet-300);
+  }
+
+  .u-underline-hover-current::after {
+    background-color: currentColor;
+  }
+
+  .u-underline-hover:hover::after,
+  .u-underline-hover:focus-visible::after,
+  .u-underline-hover-current:hover::after,
+  .u-underline-hover-current:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
