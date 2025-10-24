@@ -1,4 +1,4 @@
-import './styles/globals.css'
+
 import TestComponent from "./components/test/TestComponent"
 import AppRouter from './routers/route'
 

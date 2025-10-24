@@ -1,7 +1,10 @@
+import { LoginTemplate } from "../components/templates/LoginTemplate"
 
 const Login = () => {
     return (
-        <div>Login</div>
+        <>
+            <LoginTemplate />
+        </>
     )
 }
 

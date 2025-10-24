@@ -72,11 +72,9 @@
 ============================================================================ */
 
 :root {
-
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @theme inline {
@@ -98,6 +96,7 @@
   --color-pastel-orange: #f4c695;
   --color-pastel-orange-300: #ffae62;
   --color-disabled: #676773;
+  --color-gray-subtitle: #6e6e73;
 
   --color-pastel-lightblue-300: #63DFF8;
   --color-fluor-yellow-300: #DFF863;
@@ -279,11 +278,10 @@
 ============================================================================ */
 
 @layer base {
-  html, body {
-    height: 100%;
-  }
 
   body {
+    min-height: 100vh;
+    max-width: 1280px;
     margin: 0;
     background: var(--background);
     color: var(--foreground);
@@ -293,9 +291,44 @@
     -webkit-font-feature-settings: "liga" 1;
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, p {
     font-family: var(--font-sf-pro-display); /* headings use SF Pro Display */
     margin: 0;
+  }
+
+  h1{
+    font-size: var(--text-title-large);
+    line-height: var(--leading-title-large);
+    font-weight: var(--weight-title-large);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  h2{
+    font-size: var(--text-title1);
+    line-height: var(--leading-title1);
+    font-weight: var(--weight-title1);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  h3{
+    font-size: var(--text-title2);
+    line-height: var(--leading-title2);
+    font-weight: var(--weight-title2);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  h4{
+    font-size: var(--text-headline);
+    line-height: var(--leading-headline);
+    font-weight: var(--weight-headline);
+    font-family: var(--font-sf-pro-display);
+  }
+
+  p{
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    font-weight: var(--weight-body);
+    font-family: var(--font-sf-pro-text);
   }
 
   strong { font-weight: 700; }
@@ -395,17 +428,6 @@
     text-decoration: none;
   }
 
-  /* Search field molecule */
-  .search-field {
-    @apply flex items-center gap-2 border rounded-[10px] px-3 py-2 bg-white;
-    border-color: var(--color-pastel-yellow-50);
-  }
-
-  .input {
-    @apply w-full px-3 py-2 border rounded-md;
-    border-color: var(--color-pastel-yellow-50);
-    font-family: var(--font-sf-pro-text);
-  }
 
   /* Underline hover utilities (from original) */
   .u-underline-hover,

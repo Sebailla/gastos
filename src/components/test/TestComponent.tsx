@@ -1,5 +1,5 @@
 'use client'
-import {Button, Icon, Input, Avatar} from "../../index"
+import {Button, Icon, Avatar, Input} from "../../index"
 
 
 //import { HeaderCard } from "../ui/cards/HeaderCard"
@@ -17,7 +17,7 @@ const TestComponent = () => {
     }, [theme]) */
 
     return (
-        <div className="container md:max-w-[1280px] flex flex-col justify-center items-center gap-5">
+        <div className="container md:max-w-6xl flex flex-col justify-center items-center gap-5">
 
             <section>
                 <Button className='' variant='success' onClick={() => alert('Primary Button Clicked!')}>
@@ -87,41 +87,9 @@ const TestComponent = () => {
 
                 <br />
 
-                <Button className='mr-4 mb-4' color="yellow">
-                    Color Yellow
-                </Button>
-                <Button className='mr-4' color="lira">
-                    Color Lira
-                </Button>
-                <Button className='mr-4' color="sky">
-                    Color Sky
-                </Button>
-                <Button className='mr-4' color="rose">
-                    Color Rose
-                </Button>
-                <Button className='mr-4' color="green">
-                    Color Green Apple
-                </Button>
-                <Button className='mr-4' color="red">
-                    Color Red
-                </Button>
+                <Input name="name" label="Nombre"/>
 
-                <Button color='ghost' className="ml-4">
-                    Ghost Button
-                </Button>
-                <Button variant='ghost' className="ml-4" disabled>
-                    Disabled Ghost Button
-                </Button>
-                <Button variant='icon' color="yellow" className="ml-4" >
-                    <Icon name="search" size={24} />
-                </Button>
-                <Button variant='iconText' color="rose" className="ml-4 mb-4">
-                    <Icon name="user" size={16} />
-                    User
-                </Button>
-
-                <Input className='mb-4' />
-
+                
                 <Avatar src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/330028997/original/9879e9c7c8dff0c83fc10a19b57668dda4eb12b6/design-your-avatar-vision-to-life.png" alt="User Avatar" className="ml-4 mb-4" />
             </section>
 
