@@ -1,5 +1,5 @@
 'use client'
-import {Button, Icon, Avatar, Input} from "../../index"
+import { Button, Icon, Avatar, Input } from "../../index"
 
 
 //import { HeaderCard } from "../ui/cards/HeaderCard"
@@ -23,7 +23,7 @@ const TestComponent = () => {
                 <Button className='' variant='success' onClick={() => alert('Primary Button Clicked!')}>
                     Success Button
                 </Button>
-                <Button variant="danger"  className="ml-4 mb-4" onClick={() => alert('Secondary Button Clicked!')}>
+                <Button variant="danger" className="ml-4 mb-4" onClick={() => alert('Secondary Button Clicked!')}>
                     Danger Button
                 </Button>
                 <Button variant='ghost' className="ml-4">
@@ -36,14 +36,46 @@ const TestComponent = () => {
                     <Icon name="search" size={24} />
                 </Button>
                 <Button variant='iconText' className="ml-4" >
-                    <Icon name="user" size={16}/>
+                    <Icon name="user" size={16} />
                     User
                 </Button>
 
                 <br />
 
-                <Icon name="user" size={24} className="my-4" />
-                
+                <Icon name="search" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="cart" size={24} className="m-4" color={'#ae4524'} />
+                <Icon name="bag" size={24} className="m-4" />
+                <Icon name="close" size={24} className="m-4" />
+                <Icon name="add" size={24} className="m-4 border rounded-md" />
+                <Icon name="trash" size={24} className="m-4" />
+                <Icon name="edit" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+
+                <br />
+
+                <Icon name="touchid" size={24} className="m-4" color={'#ae4524'} />
+                <Icon name="user" size={24} fill className="m-4" />
+                <Icon name="cart" size={24} fill className="m-4" />
+                <Icon name="bag" size={24} fill className="m-4" />
+                <Icon name="add" size={24} className="m-4" />
+                <Icon name="add" size={24} fill className="m-4" />
+                <Icon name="trash" size={24} fill className="m-4" />
+                <Icon name="edit" size={24} className="m-4" color={'#ae4524'}/>
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+                <Icon name="user" size={24} className="m-4" />
+
                 <br />
 
                 <Button className='mr-4 mb-4' color="base">
@@ -70,7 +102,7 @@ const TestComponent = () => {
                 <Button className='mr-4' color="orange">
                     Color Orange
                 </Button>
-                
+
                 <Button color='ghost' className="ml-4">
                     Ghost Button
                 </Button>
@@ -87,9 +119,9 @@ const TestComponent = () => {
 
                 <br />
 
-                <Input name="name" label="Nombre"/>
+                <Input name="name" label="Nombre" />
 
-                
+
                 <Avatar src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/330028997/original/9879e9c7c8dff0c83fc10a19b57668dda4eb12b6/design-your-avatar-vision-to-life.png" alt="User Avatar" className="ml-4 mb-4" />
             </section>
 

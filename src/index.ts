@@ -3,7 +3,6 @@ export * from './components/atoms/Avatar';
 export * from './components/atoms/Button';
 export * from './components/atoms/Icon';
 export * from './components/atoms/Input';
-export * from './components/atoms/Key2';
 export * from './components/molecules/ErrorMsg';
 export * from './components/molecules/SuccessMsg';
 export * from './components/templates/HomeTemplate';

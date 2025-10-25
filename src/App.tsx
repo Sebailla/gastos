@@ -1,5 +1,4 @@
 
-import TestComponent from "./components/test/TestComponent"
 import AppRouter from './routers/route'
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
   return (
     <>
       <AppRouter/>
-      <TestComponent />
     </>
   )
 }
